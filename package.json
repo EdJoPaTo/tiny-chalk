@@ -1,24 +1,28 @@
 {
-  "name": "hello-chalk",
-  "version": "0.0.1",
-  "description": "a lite version of chalk",
+  "name": "tiny-chalk",
+  "version": "1.0.0",
+  "description": "A super tiny version of chalk",
   "main": "./index.js",
+  "scripts": {
+    "test": "node ./test.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vzhufeng/helloChalk.git"
+    "url": "git+https://github.com/maxlath/tiny-chalk.git"
   },
   "keywords": [
+    "tiny",
     "lite",
     "color",
-		"colour",
-		"colors",
+    "colour",
+    "colors",
     "console",
     "chalk"
   ],
   "author": "vzhufeng",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vzhufeng/helloChalk/issues"
+    "url": "https://github.com/vzhufeng/tiny-chalk/issues"
   },
-  "homepage": "https://github.com/vzhufeng/helloChalk#readme"
+  "homepage": "https://github.com/vzhufeng/tiny-chalk#readme"
 }

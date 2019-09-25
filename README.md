@@ -1,27 +1,22 @@
-# helloChalk
-a lite version of chalk, copyed some code from https://github.com/chalk/chalk and https://github.com/Qix-/color-convert
+# tiny-chalk
+
+A super tiny version of [chalk](https://github.com/chalk/chalk), loading in ~1ms instead of ~10ms for chalk
 
 ## Install
 
 ```bash
-npm install hello-chalk
+npm install tiny-chalk
 ```
 
 ## Usage
 
 ```js
-const chalk = require('hello-chalk');
-
-console.log(chalk.red('Hello world!'));
-
-console.log(chalk.bold(chalk.bgBlack(chalk.red('Hello world again!'))));
-
-console.log(chalk.bghex('#333F60')(chalk.hex('#fff000')('Hello world once again!')));
-
-// actually the '#' can be omitted
+const { red, bold, bgBlack } = require('tiny-chalk')
+console.log(red('Hello world!'))
+console.log(bold(bgBlack(red('Hello world again!'))))
 ```
 
-these are supported styles and colors, don't forget you can write hex value with hex and bghex
+## Supported styles and colors
 
 ```
 // style

@@ -19,7 +19,7 @@ const styleMap = {
   magenta: [35, 39],
   cyan: [36, 39],
   white: [37, 39],
-  blackBright: [90, 39],
+  grey: [90, 39],
   redBright: [91, 39],
   greenBright: [92, 39],
   yellowBright: [93, 39],
@@ -37,7 +37,7 @@ const styleMap = {
   bgMagenta: [45, 49],
   bgCyan: [46, 49],
   bgWhite: [47, 49],
-  bgBlackBright: [100, 49],
+  bgGrey: [100, 49],
   bgRedBright: [101, 49],
   bgGreenBright: [102, 49],
   bgYellowBright: [103, 49],
@@ -47,9 +47,9 @@ const styleMap = {
   bgWhiteBright: [107, 49]
 }
 
-module.exports = Object.keys(styleMap).reduce((chalk, styleName) => {
-  chalk[styleName] = function (content) {
+module.exports = Object.keys(styleMap).reduce((index, styleName) => {
+  index[styleName] = function (content) {
     return `\u001B[${styleMap[styleName][0]}m${content}\u001B[${styleMap[styleName][1]}m`
   }
-  return chalk
+  return index
 }, {})

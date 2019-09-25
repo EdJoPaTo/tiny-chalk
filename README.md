@@ -38,7 +38,7 @@ blue
 magenta
 cyan
 white
-blackBright
+grey
 redBright
 greenBright
 yellowBright
@@ -56,7 +56,7 @@ bgBlue
 bgMagenta
 bgCyan
 bgWhite
-bgBlackBright
+bgGrey
 bgRedBright
 bgGreenBright
 bgYellowBright

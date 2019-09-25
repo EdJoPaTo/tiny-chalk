@@ -19,10 +19,10 @@
     "console",
     "chalk"
   ],
-  "author": "vzhufeng",
+  "author": "maxlath",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vzhufeng/tiny-chalk/issues"
+    "url": "https://github.com/maxlath/tiny-chalk/issues"
   },
-  "homepage": "https://github.com/vzhufeng/tiny-chalk#readme"
+  "homepage": "https://github.com/maxlath/tiny-chalk#readme"
 }

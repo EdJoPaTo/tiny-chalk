@@ -47,14 +47,13 @@ const styleMap = {
 	bgWhiteBright: [107, 49]
 };
 
-// write by myself
-function Chalk() {}
+const chalk = {}
 
 const styleName = Object.keys(styleMap);
 for(let i=0, len=styleName.length; i<len; i++){
-  Chalk.prototype[styleName[i]] = function(content) {
+  chalk[styleName[i]] = function(content) {
     return `\u001B[${styleMap[styleName[i]][0]}m${content}\u001B[${styleMap[styleName[i]][1]}m`;
   };
 }
 
-module.exports = new Chalk();
+module.exports = chalk;

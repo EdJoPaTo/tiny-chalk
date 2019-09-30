@@ -1,6 +1,6 @@
 # tiny-chalk
 
-A super tiny version of [chalk](https://github.com/chalk/chalk), loading in ~1ms instead of ~10ms for chalk
+A super tiny version of [chalk](https://github.com/chalk/chalk), loading in ~1ms instead of ~10ms for chalk (YMMV)
 
 ## Install
 

@@ -2,6 +2,8 @@
 
 A super tiny version of [chalk](https://github.com/chalk/chalk), loading in ~1ms instead of ~10ms for chalk (YMMV)
 
+This is convenient when you are in a controlled environment (that is that you don't need all the `supports-color` detection `chalk` provides)
+
 ## Install
 
 ```bash

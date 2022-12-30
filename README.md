@@ -7,13 +7,17 @@ This is convenient when you are in a controlled environment (that is that you do
 ## Install
 
 ```bash
+# ES module
 npm install tiny-chalk
+
+# CommonJS
+npm install tiny-chalk@v2
 ```
 
 ## Usage
 
 ```js
-const { red, bold, bgBlack } = require('tiny-chalk')
+import { red, bold, bgBlack } from 'tiny-chalk'
 console.log(red('Hello world!'))
 console.log(bold(bgBlack(red('Hello world again!'))))
 ```

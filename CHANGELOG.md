@@ -1,6 +1,9 @@
 # CHANGELOG
 *versions follow [SemVer](http://semver.org)*
 
+## 3.0.0 - 2022-12-30
+**BREAKING CHANGE**: convert to ES module
+
 ## 2.0.0 - 2019-09-25
 **BREAKING CHANGE**:
 * renamed `blackBright` -> `grey`

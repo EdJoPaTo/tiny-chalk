@@ -17,14 +17,14 @@ npm install tiny-chalk@v2
 ## Usage
 
 ```js
-import { red, bold, bgBlack } from 'tiny-chalk'
+import { bgBlack, bold, red } from 'tiny-chalk'
 console.log(red('Hello world!'))
 console.log(bold(bgBlack(red('Hello world again!'))))
 ```
 
 ## Supported styles and colors
 
-```
+```plaintext
 // style
 reset
 bold

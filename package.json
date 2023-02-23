@@ -3,12 +3,14 @@
   "version": "3.0.1",
   "type": "module",
   "description": "A super tiny version of chalk",
-  "main": "./index.js",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "scripts": {
-    "test": "node ./test.js"
+    "prepack": "tsc",
+    "test": "tsc && node --enable-source-maps ./dist/test/test.js"
   },
   "files": [
-    "index.js"
+    "dist/src"
   ],
   "repository": {
     "type": "git",
@@ -28,5 +30,11 @@
   "bugs": {
     "url": "https://github.com/maxlath/tiny-chalk/issues"
   },
-  "homepage": "https://github.com/maxlath/tiny-chalk#readme"
+  "homepage": "https://github.com/maxlath/tiny-chalk#readme",
+  "engines": {
+    "node": ">=14"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
 }

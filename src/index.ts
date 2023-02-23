@@ -1,6 +1,6 @@
 // Copied from https://github.com/chalk/chalk
 const styleMap = {
-	// style
+  // style
   reset: [0, 0],
   bold: [1, 22],
   dim: [2, 22],
@@ -10,7 +10,7 @@ const styleMap = {
   hidden: [8, 28],
   strikethrough: [9, 29],
 
-	// front color
+  // front color
   black: [30, 39],
   red: [31, 39],
   green: [32, 39],
@@ -28,7 +28,7 @@ const styleMap = {
   cyanBright: [96, 39],
   whiteBright: [97, 39],
 
-	// back color
+  // back color
   bgBlack: [40, 49],
   bgRed: [41, 49],
   bgGreen: [42, 49],
@@ -44,15 +44,20 @@ const styleMap = {
   bgBlueBright: [104, 49],
   bgMagentaBright: [105, 49],
   bgCyanBright: [106, 49],
-  bgWhiteBright: [107, 49]
-}
+  bgWhiteBright: [107, 49],
+} as const
 
-const chalk = Object.keys(styleMap).reduce((index, styleName) => {
-  index[styleName] = function (content) {
-    return `\u001B[${styleMap[styleName][0]}m${content}\u001B[${styleMap[styleName][1]}m`
-  }
-  return index
-}, {})
+export type Style = keyof typeof styleMap
+export type FormatFn = (content: string) => string
+
+export const chalk = (Object.keys(styleMap) as readonly Style[]).reduce(
+  (index, styleName) => {
+    const [begin, end] = styleMap[styleName]
+    index[styleName] = content => `\u001B[${begin}m${content}\u001B[${end}m`
+    return index
+  },
+  {} as Record<Style, FormatFn>,
+)
 
 export default chalk
 

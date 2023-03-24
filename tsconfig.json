@@ -6,7 +6,6 @@
     "moduleResolution": "nodenext",
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
-    "importsNotUsedAsValues": "error",
     "newLine": "lf",
     "noEmitOnError": true,
     "resolveJsonModule": false,

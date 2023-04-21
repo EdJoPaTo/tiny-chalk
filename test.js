@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { red, blue, yellow, green, bgGrey, bgMagenta } from './index.js'
+import chalk, { red, blue, yellow, green, bgGrey, bgMagenta, grey } from './index.js'
 
 console.log(red('chalk'))
 console.log(blue('chalk'))

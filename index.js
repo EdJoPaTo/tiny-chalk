@@ -1,5 +1,5 @@
-// Copied from https://github.com/chalk/chalk
-const styleMap = {
+// Style map codes copied from https://github.com/chalk/chalk
+const styleMap = /** @type {const} */ ({
 	// style
   reset: [0, 0],
   bold: [1, 22],
@@ -45,14 +45,23 @@ const styleMap = {
   bgMagentaBright: [105, 49],
   bgCyanBright: [106, 49],
   bgWhiteBright: [107, 49]
-}
+})
 
-const chalk = Object.keys(styleMap).reduce((index, styleName) => {
-  index[styleName] = function (content) {
+/**
+ * @callback StyleFunction
+ * @param {string} content - Text to style
+ * @returns {string} - Styled text
+ *
+ * @typedef {keyof typeof styleMap} StyleName
+ * @typedef {Record<StyleName, StyleFunction>} Chalk
+ */
+
+const chalk = /** @type {Chalk} */ (Object.keys(styleMap).reduce((index, styleName) => {
+  index[styleName] = /** @type {StyleFunction} */ function (content) {
     return `\u001B[${styleMap[styleName][0]}m${content}\u001B[${styleMap[styleName][1]}m`
   }
   return index
-}, {})
+}, {}))
 
 export default chalk
 

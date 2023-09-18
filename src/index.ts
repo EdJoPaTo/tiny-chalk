@@ -1,4 +1,4 @@
-// Copied from https://github.com/chalk/chalk
+// Style map codes copied from https://github.com/chalk/chalk
 const styleMap = {
   // style
   reset: [0, 0],
@@ -47,16 +47,16 @@ const styleMap = {
   bgWhiteBright: [107, 49],
 } as const
 
-export type Style = keyof typeof styleMap
-export type FormatFn = (content: string) => string
+export type StyleName = keyof typeof styleMap
+export type StyleFunction = (content: string) => string
 
-export const chalk = (Object.keys(styleMap) as readonly Style[]).reduce(
+export const chalk = (Object.keys(styleMap) as readonly StyleName[]).reduce(
   (index, styleName) => {
     const [begin, end] = styleMap[styleName]
     index[styleName] = content => `\u001B[${begin}m${content}\u001B[${end}m`
     return index
   },
-  {} as Record<Style, FormatFn>,
+  {} as Record<StyleName, StyleFunction>,
 )
 
 export default chalk

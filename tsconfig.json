@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "target": "es2016",
-    "module": "esnext",
-    "moduleResolution": "nodenext",
+    "target": "ES2015",
+    "module": "Node16",
+    "moduleResolution": "Node16",
     "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "newLine": "lf",

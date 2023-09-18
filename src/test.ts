@@ -1,4 +1,4 @@
-import chalk, { bgGrey, bgMagenta, blue, green, grey, red, yellow } from '../src/index.js'
+import chalk, { bgGrey, bgMagenta, blue, green, grey, red, yellow } from './index.js'
 
 console.log(red('chalk'))
 console.log(blue('chalk'))

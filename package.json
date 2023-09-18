@@ -3,14 +3,15 @@
   "version": "3.0.2",
   "type": "module",
   "description": "A super tiny version of chalk",
-  "main": "./dist/src/index.js",
-  "types": "./dist/src/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "prepack": "tsc",
-    "test": "tsc && node --enable-source-maps ./dist/test/test.js"
+    "test": "tsc && node --enable-source-maps ./dist/test.js"
   },
   "files": [
-    "dist/src"
+    "dist",
+		"!*test.*"
   ],
   "repository": {
     "type": "git",
